@@ -120,8 +120,7 @@ class Notepad:
     def __openFile(self):
 
         self.file=askopenfilename(defaultextension=".txt",
-                                    filetypes=[("All Files", "*.*"),
-                                               ("Text Documents", "*.txt")])
+                                    filetypes=[("Text Documents", "*.txt"),("All Files", "*.*")])
 
         if self.file=="":
 
@@ -149,7 +148,7 @@ class Notepad:
 
         if self.file == None:
             # Save as new file
-            self.file=asksaveasfilename(initialfile='Untitled.txt',defaultextension=".txt",filetypes=[("All Files", "*.*"),("Text Documents", "*.txt")])
+            self.file=asksaveasfilename(initialfile='Untitled.txt',defaultextension=".txt",filetypes=[("Text Documents", "*.txt"),("All Files", "*.*")])
 
             if self.file=="":
                 self.file=None
